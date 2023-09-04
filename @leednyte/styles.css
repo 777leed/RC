@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Kennedy;
+    src:url("C:/Users/hp/Downloads/Kennedy SC GD Book.ttf");
+  }
+body, html {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aliceblue;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+header .logo img {
+    width: 80px;
+    height: 80px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    gap: 5%;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+span.mainslogan {
+    font-family: 'Roboto Serif', serif;
+    color: #0E773F;
+}
+li a {
+    color: #222831;
+}
+li.active a {
+    color: #0E773F;
+}
+span.subslogan {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+    color: #808080;
+}
+nav {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: cente;
+    align-items: center;
+}
+
+nav ul li {
+    float: left;
+    margin-right: 5%;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main h1 {
+    font-weight: 400;
+    font-family: Kennedy !important;
+    font-size: 1.7em;
+}
+
+.page-wrapper {
+    padding: 0 5%;
+}
+
+.normal-text {
+    color: #000;
+    text-align: justify;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5em; /* 150% */
+}
+
+
+
