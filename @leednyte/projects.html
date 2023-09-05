@@ -8,34 +8,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Quicksand:wght@300;400;500&family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <title>RESILIENT COMMUNITIES - Projects</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="../Assets/logo_round.png" alt="RC LOGO">
-            <div class="slogan">
-                <span class="mainslogan">RESILIENT COMMUNITIES</span>
-                <span class="subslogan">Inspiration through Innovation</span>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">What We Do</a></li>
-                <li><a href="">Internship Programs</a></li>
-                <li><a href="">Contact Us</a></li>
 
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="page-wrapper">
-            <h1>Support Our Projects</h1>
-            <p class="normal-text">
-                Resilient Communities has a variety of projects that we've completed, ongoing, in the pipeline, and that need more research and development. To help us further our mission, you can help us fund our projects directly, or contact us to discuss partnering with your organization or institution to assist in the further research and development of an engineering or infrastructure project. Thank you for your support in our organization's mission and vision!
-            </p>
-        </div>
-    </main>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <img src="../Assets/logo_round.png" alt="RC LOGO">
+                <div class="slogan">
+                    <span class="mainslogan">RESILIENT COMMUNITIES</span>
+                    <span class="subslogan">Inspiration through Innovation</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">What We Do</a></li>
+                    <li><a href="">Internship Programs</a></li>
+                    <li><a href="">Contact Us</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="page-wrapper">
+                <div class="introduction">
+                    <h1>Support Our Projects</h1>
+                    <p class="normal-text">
+                        Resilient Communities has a variety of projects that we've completed, ongoing, in the pipeline, and that need more research and development. To help us further our mission, you can help us fund our projects directly, or contact us to discuss partnering with your organization or institution to assist in the further research and development of an engineering or infrastructure project. Thank you for your support in our organization's mission and vision!
+                    </p>
+                </div>
+                
+                <div class="projects-container">
+                    <div class="filters">
+                        <div class="left-knobs">
+                            <div class="filter"><img src="../Assets/svgs/flag.svg" alt=""><span>All Projects</span></div>
+                            <div class="filter"><img src="../Assets/svgs/checkmark.svg" alt=""><span>Completed</span></div>
+                            <div class="filter"><img src="../Assets/svgs/inprogress.svg" alt=""><span>In Progress</span></div>
+                        </div>
+                        <div class="right-knobs">
+                            <div class="filter"><img src="../Assets/svgs/grid.svg" alt=""><span>Grid</span></div>
+                            <div class="filter"><img src="../Assets/svgs/list.svg" alt=""><span>List</span></div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="cards">
+                        <div v-for="project in projects" class="card">
+                            <div class="card-image">
+                                <img :src="project.img" alt="">
+                            </div>
+                            <div class="bottom-half">
+                                <span class="title">
+                                    {{project.title}}
+                                </span>
+                                <div class="progress-2"></div>
+                                <button class="read-more">Read More</button>
+                            </div>
+                            <div class="stats">
+                                <div class="raised">
+                                    <span>Raised</span>
+                                    <span>$1234,00</span>
+                                </div>
+                                <div class="Goal">
+                                    <span>Goal</span>
+                                    <span>$2234,032</span>
+                                </div>
+                                <div class="Left">
+                                    <span>Left</span>
+                                    <span>$1000,32</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+        <!-- import app -->
+        <script src="main.js"></script>
+        <!-- mount app -->
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
 </body>
 </html>
