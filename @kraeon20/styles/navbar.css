@@ -1,0 +1,121 @@
+header {
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 60px;
+    height: 60px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+span.brandname {
+    font-family: 'Roboto Serif', serif;
+    font-size: large;
+    color: #0E773F;
+}
+
+
+span.motto {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+    color: #808080;
+}
+
+nav {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li.active a {
+    color: var(--green-color);
+}
+
+nav ul li:last-child {
+    float: left;
+    margin-right: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #222831;
+}
+
+nav ul li:last-child .btn.support-btn {
+    background-color: var(--green-color);
+    color: var(--light-color);
+    padding: 10px 18px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Rest of the nav links hover effect except the last item(Support Us button)*/
+nav ul li:not(:last-child) a {
+    position: relative;
+    text-decoration: none;
+}
+
+nav ul li:not(:last-child) a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--green-color);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+nav ul li:not(:last-child) a:hover::before {
+    width: 100%;
+}
+
+
+/* Hover effect for the Support Us button */
+nav ul li:last-child .btn.support-btn:hover {
+    background-color: var(--light-color);
+    color: var(--green-color);
+}
